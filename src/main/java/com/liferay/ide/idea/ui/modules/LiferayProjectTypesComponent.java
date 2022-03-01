@@ -214,11 +214,8 @@ public class LiferayProjectTypesComponent extends JPanel implements LiferayWorks
 				validationTitle);
 		}
 
-		ProjectManager projectManager = ProjectManager.getInstance();
 
-		Project workspaceProject = projectManager.getOpenProjects()[0];
-
-		if (LiferayWorkspaceSupport.isValidMavenWorkspaceProject(workspaceProject)) {
+		if (LiferayWorkspaceSupport.isValidMavenWorkspaceProject(_project)) {
 			if (Objects.equals(type, "form-field")) {
 				VersionRange requiredVersionRange = new VersionRange(
 					true, new Version("7.0"), new Version("7.2"), false);
